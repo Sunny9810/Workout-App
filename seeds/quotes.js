@@ -1,4 +1,22 @@
-const Quote =[
+const express = require('express');
+const sequelize = require('../config/connection');
+
+const PORT = process.env.PORT || 3001;
+const app = express(); 
+
+app.use(express.json());
+//Not sure if this is necessary or correct
+app.use(express.urlencoded({ extended: false}));
+
+//imports quote model
+const { Quote } = require('..quotes.js/models');
+
+sequelize.sync().then(() => {
+    app.listen(PORT, () => console.log(''));
+});
+
+app.get('/seed', async (req,res) => {
+    await Quote.bulkCreate([
      {
         quote: "It's your workout, your body, your journey. OWN IT!",
     },
@@ -29,4 +47,5 @@ const Quote =[
     {
         quote: "Best views always come after the hardest climbs.",
     },
-    ];
+    ]);
+});
