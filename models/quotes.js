@@ -6,13 +6,13 @@ class Quotes extends Model {}
 Quotes.init(
     {
         id: {
-            type: DataTypes.INTERGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true, 
             autoIncrement: true,
         },
         quotes: {
-            type:DataTypes.VARCHAR(30),
+            type:DataTypes.STRING,
             allowNull:false,
          },
         },
