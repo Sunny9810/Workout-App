@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false}));
 
 //imports quote model
-const { Quote } = require('..quotes.js/models');
+const { Quote } = require('../models/quotes.js');
 
 sequelize.sync().then(() => {
     app.listen(PORT, () => console.log(''));
