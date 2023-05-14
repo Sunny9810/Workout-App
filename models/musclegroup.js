@@ -11,21 +11,21 @@ MuscleGroups.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    muscle_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    exercises_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "exercises",
-        key: "id",
-      },
-    },
+    // exercises_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "exercises",
+    //     key: "id",
+    //   },
+    // },
     // images_id: {
     //   type: DataTypes.INTEGER,
     //   references: {
