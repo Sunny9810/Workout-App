@@ -16,7 +16,7 @@
   background-color: #eef5db;
 }
 
-#btn-color {
+.btn-color {
   background-color: #fe5f55;
 }
 .row {
@@ -52,4 +52,8 @@ img {
   font-family: "Jost", sans-serif;
   /* font-family: 'Playfair Display SC', serif;
   font-family: 'PT Sans', sans-serif; ; */
+}
+
+.title{
+  text-align: center;
 }
