@@ -29,8 +29,4 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/test', (req,res) => {
-  res.render('workoutpage')
-});
-
 module.exports = router;
