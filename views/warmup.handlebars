@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>Hear this...</h2>
-            {{!-- {{each quotes}} --}}
+            {{#each quotes as |quote|}}
             <div class="card mb-3">
                 <blockquote class="quote">
-                    {{!-- <p>{{quote}}</p> --}}
+                    <p>{{quote.quotes}}</p>
                 </blockquote>
             </div>
+        {{/each}}
         </div>
-        {{!-- {{/each}} --}}
     </div>
 </div>
 <div class="row">
@@ -44,5 +44,5 @@
 </div>
 {{!-- Should it just be a link to the workout page? --}}
 <div class="d-grid gap-2 col-6 mx-auto">
-    <button class="btn btn-primary" type="button">Todays Workout!</button>
+    <button class="btn btn-primary" type="button">On To Todays Workout!</button>
 </div>
