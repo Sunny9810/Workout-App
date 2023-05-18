@@ -33,4 +33,7 @@ router.get("/", async (req, res) => {
   res.render("test");
 });
 
+router.get("/test", (req,res)=>{
+  res.render("optionpg")
+})
 module.exports = router;

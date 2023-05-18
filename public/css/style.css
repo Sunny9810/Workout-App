@@ -53,3 +53,61 @@ img {
   /* font-family: 'Playfair Display SC', serif;
   font-family: 'PT Sans', sans-serif; ; */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sunny's working page */
+#previous-workout{
+  background-color:#eef5db;
+}
+
+
+.card{
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#warm-up{
+  background-color: #b8d8d8;
+}
+
+#todays-workout{
+  background-color: #b8d8d8;
+}
+
+#cool-down{
+  background-color: #b8d8d8;
+}
+
+
+@media (max-width: 767px) {
+  .optionpg {
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+  
+  }
+  .card {
+    width: 100%;
+    margin: 10px;
+    padding:10px;
+    
+  }
+}
