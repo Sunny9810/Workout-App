@@ -4,14 +4,14 @@ const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
-    // const userData = await User.findAll({
-    //   attributes: { exclude: ["password"] },
-    //   order: [["name", "ASC"]],
-    // });
+    const userData = await User.findAll({
+      attributes: { exclude: ["password"] },
+      order: [["name", "ASC"]],
+    });
 
-    // const users = userData.map((project) => project.get({ plain: true }));
+    const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render("homepage", {
+    res.render("intro", {
       users,
       logged_in: req.session.logged_in,
     });
@@ -29,8 +29,8 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// router.get("/", async (req, res) => {
-//   res.render("test");
-// });
+router.get("/workout", async (req, res) => {
+  res.render("workoutpage");
+});
 
 module.exports = router;

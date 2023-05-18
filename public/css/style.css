@@ -54,6 +54,15 @@ img {
   font-family: 'PT Sans', sans-serif; ; */
 }
 
-.title{
+.title {
   text-align: center;
+}
+
+#intro-font {
+  font-size: 10rem;
+  color: #fe5f55;
+}
+
+#getfit-title {
+  font-size: 4rem;
 }
