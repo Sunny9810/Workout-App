@@ -33,6 +33,12 @@ else{
 }
 
 // modal event listener
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
+
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })
 
 var allModals = document.querySelectorAll('.modal-open')
 console.log(allModals);

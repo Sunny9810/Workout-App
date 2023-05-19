@@ -1,7 +1,9 @@
 const router = require("express").Router();
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
 const withAuth = require("../utils/auth");
+const { route } = require("./api");
 
+// !!!!!!!!!!!!!!!!!!LOGIN ROUTES !!!!!!!!!!!!!!!! //
 router.get("/", async (req, res) => {
   try {
     const userData = await User.findAll({
@@ -29,13 +31,53 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/optionpg", (req, res) => {
+  res.render("optionpg");
+});
+
+// !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //
+router.get("/cooldownpage", async (req, res) => {
+  res.render("cooldownpage");
+});
+
+router.get("/cooldown/:id", async (req, res) => {
+  try {
+    //search db for exercise(or mgroup?) with id that matches params
+    const cooldowngroupdata = await MuscleGroup.findByPk(req.params.id);
+    console.log(cooldowngroupdata);
+    console.log(req.params.id);
+    //serialize to only include data we need
+    const exercise = cooldowngroupdata.get({ plain: true });
+    res.render("cooldownpage", exercise);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// !!!!!!!!!!!!!!!!!!WARM UP ROUTES !!!!!!!!!!!!!!!! //
+router.get("/warmuppage", async (req, res) => {
+  res.render("warmuppage");
+});
+
+router.get("/warmup/:id", async (req, res) => {
+  try {
+    //search db for exercise(or mgroup?) with id that matches params
+    const warmupgroupdata = await MuscleGroup.findByPk(req.params.id);
+    console.log(warmupgroupdata);
+    console.log(req.params.id);
+    //serialize to only include data we need
+    const exercise = warmupgroupdata.get({ plain: true });
+    res.render("warmuppage", exercise);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// !!!!!!!!!!!!!!!!!!WORKOUTPAGE ROUTES !!!!!!!!!!!!!!!! //
+
 router.get("/workoutpage", async (req, res) => {
   res.render("workoutpage");
 });
-
-// router.get("/test", async (req, res) => {
-//   res.render("test");
-// });
 
 router.get("/workoutpage/:id", async (req, res) => {
   try {
@@ -51,4 +93,13 @@ router.get("/workoutpage/:id", async (req, res) => {
   }
 });
 
+router.get("/test", (req, res) => {
+  res.render("optionpg");
+});
+
+// router.get("/previousWorkout", (req,res)=>{
+//   res.render("previous-workout")
+// });
+
+router;
 module.exports = router;
