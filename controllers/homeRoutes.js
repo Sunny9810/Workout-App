@@ -40,7 +40,7 @@ router.get("/workoutpage", async (req, res) => {
 router.get("/workoutpage/:id", async (req, res) => {
   try {
     //search db for exercise(or mgroup?) with id that matches params
-    const musclegroupdata = await MuscleGroup.findByPk(req.params.id);
+    const musclegroupdata = await MuscleGroup.findByPk(req.params.id, {include: Exercises, });
     console.log(musclegroupdata);
     console.log(req.params.id);
     //serialize to only include data we need
