@@ -31,6 +31,10 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/optionpg", (req, res) => {
+  res.render("optionpg");
+});
+
 // !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //
 router.get("/cooldownpage", async (req, res) => {
   res.render("cooldownpage");
@@ -89,13 +93,13 @@ router.get("/workoutpage/:id", async (req, res) => {
   }
 });
 
-router.get("/test", (req,res)=>{
-  res.render("optionpg")
+router.get("/test", (req, res) => {
+  res.render("optionpg");
 });
 
 // router.get("/previousWorkout", (req,res)=>{
 //   res.render("previous-workout")
 // });
 
-router
+router;
 module.exports = router;
