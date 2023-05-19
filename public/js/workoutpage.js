@@ -22,6 +22,10 @@ document.getElementById('exampleModal').addEventListener('show.bs.modal', functi
 //   });
   
   
+// redirect button for cooldown page
+document.getElementById('redirect-btn').addEventListener('click', function(){
+    window.location.href = 'cooldownpage'
+});
 
 // carousel event listener
 const multipleItemCarousel =document.querySelector('#carouselExampleControls');
@@ -55,46 +59,6 @@ $('.carousel-control-prev').on('click', function(){
 }else{
     $(multipleItemCarousel).addClass('slide');
 }
-
-
-// if (window.matchMedia("(min-width: 576px)").matches) {
-//     var carouselWidth = document.querySelector('.carousel-inner').scrollWidth;
-//     var cardWidth = document.querySelector('.carousel-item').offsetWidth;
-//     var scrollPosition = 0;
-  
-//     document.querySelector('.carousel-control-next').addEventListener('click', function() {
-//       if (scrollPosition < (carouselWidth - (cardWidth * 4))) {
-//         console.log('next');
-//         scrollPosition = scrollPosition + cardWidth;
-//         document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//       }
-//     });
-  
-//     document.querySelector('.carousel-control-prev').addEventListener('click', function() {
-//       if (scrollPosition > 0) {
-//         console.log('previous');
-//         scrollPosition = scrollPosition - cardWidth;
-//         document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//       }
-//     });
-//   } else {
-//     document.addEventListener('click', function(event) {
-//       var target = event.target;
-//       if (target.classList.contains('carousel-control-next')) {
-//         if (scrollPosition < (carouselWidth - (cardWidth * 4))) {
-//           console.log('next');
-//           scrollPosition = scrollPosition + cardWidth;
-//           document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//         }
-//       } else if (target.classList.contains('carousel-control-prev')) {
-//         if (scrollPosition > 0) {
-//           console.log('previous');
-//           scrollPosition = scrollPosition - cardWidth;
-//           document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//         }
-//       }
-//     });
-//   }
 
 
 //   const MuscleGroups = require("../../models/musclegroup")
