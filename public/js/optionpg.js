@@ -1,5 +1,7 @@
 // Add eventlisteners to elements
 
+// console.log("testing");
+
 var previousWorkoutCard = document.querySelector(".previous-workout");
 var warmUpCard = document.querySelector(".warm-up");
 var todaysWorkoutCard = document.querySelector(".todays-workout");

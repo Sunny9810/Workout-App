@@ -35,5 +35,9 @@ router.get("/", async (req, res) => {
 
 router.get("/test", (req,res)=>{
   res.render("optionpg")
-})
+});
+
+// router.get("/previousWorkout", (req,res)=>{
+//   res.render("previous-workout")
+// });
 module.exports = router;
