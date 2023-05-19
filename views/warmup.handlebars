@@ -1,48 +1,99 @@
-<div class="container">
-    <div class="row">
+<div class="card text-center" id="quote-area">
+    <div class="card-body" id="quote-card">
+        <h5 class="card-title" id="intro-font">GET FIT</h5>
+        <h2>Hear this...</h2>
+        {{#each quotes as |quote|}}
+        <div id="quotebody" class="card mb-3">
+            <blockquote class="quote">
+                <p class="quote-text">{{quote.quotes}}</p>
+            </blockquote>
+        </div>
+        {{/each}}
+    </div>
+</div>
+<div class="justify-content-between">
+    <div class="row align-items-center " id="warmup">
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title">Workout Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title">Workout Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title">Workout Name</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of the card's content.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn" type="button">On To Todays Workout!</button>
+    </div>
+</footer>
+{{!-- <div class="container">
+    <div id="quotecard" class="row">
         <div class="col-md-8 offset-md-2">
             <h2>Hear this...</h2>
             {{#each quotes as |quote|}}
-            <div class="card mb-3">
+            <div id="quotebody" class="card mb-3">
                 <blockquote class="quote">
                     <p>{{quote.quotes}}</p>
                 </blockquote>
             </div>
-        {{/each}}
+            {{/each}}
         </div>
     </div>
-</div>
-<div class="row">
-    <divc class="col-md-4">
-        <div class="card mb-3">
-            <div class="card-body">
-                {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
-                {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
-            </div>
+</div> --}}
+{{!-- <div class="warmups">
+    <div class="row">
+        <divc class="col-md-2">
+            <div id="" class="card mb-3 ">
+                <div class="card-body">
+                    {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
+                    {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
+                    {{!-- </div>
 
-        </div>
-</div>
-<div class="row">
-    <divc class="col-md-4">
-        <div class="card mb-3">
-            <div class="card-body">
-                 {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
-                {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
             </div>
+    </div>
+    <div class="row">
+        <divc class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body"> --}}
+                    {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
+                    {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
+                    {{!-- </div>
 
-        </div>
-</div>
-<div class="row">
-    <divc class="col-md-4">
-        <div class="card mb-3">
-            <div class="card-body">
-              {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
-                {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
             </div>
+    </div>
+    <div class="row">
+        <divc class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body"> --}}
+                    {{!-- <h3 class="card-title">{{warmup exercises.name}}</h3> --}}
+                    {{!-- <p class="card-text">{{warmup exercise.description}}</p> --}}
+                    {{!-- </div>
 
-        </div>
-</div>
+            </div>
+    </div>
+</div> --}}
 {{!-- Should it just be a link to the workout page? --}}
-<div class="d-grid gap-2 col-6 mx-auto">
+{{!-- <div class="d-grid gap-2 col-6 mx-auto">
     <button class="btn btn-primary" type="button">On To Todays Workout!</button>
-</div>
+</div> --}}
