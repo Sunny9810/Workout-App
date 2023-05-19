@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
 const withAuth = require("../utils/auth");
+const { route } = require("./api");
 
 router.get("/", async (req, res) => {
   try {
@@ -51,4 +52,13 @@ router.get("/workoutpage/:id", async (req, res) => {
   }
 });
 
+router.get("/test", (req,res)=>{
+  res.render("optionpg")
+});
+
+// router.get("/previousWorkout", (req,res)=>{
+//   res.render("previous-workout")
+// });
+
+router
 module.exports = router;
