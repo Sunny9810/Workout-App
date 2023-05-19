@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../models");
+const { User, MuscleGroup, Exercises, Quotes } = require("../models");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
@@ -29,21 +29,26 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-// router.get("/workout", async (req, res) => {
-//   res.render("workoutpage");
+router.get("/workoutpage", async (req, res) => {
+  res.render("workoutpage");
+});
+
+// router.get("/test", async (req, res) => {
+//   res.render("test");
 // });
 
-router.get("//:id", async (req,res) => {
-    try {
-        //search db for exercise(or mgroup?) with id that matches params
-        const musclegroupdata = await MuscleGroups.findByPk(req.params.id)
-        console.log(musclegroupdata);
-        //serialize to only include data we need
-        const exercise = musclegroupdata.get({ plain: true });
-        res.render("workoutpage", exercise);
-    } catch (err) {
-        res.status(500).json(err);
-    }
+router.get("/workoutpage/:id", async (req, res) => {
+  try {
+    //search db for exercise(or mgroup?) with id that matches params
+    const musclegroupdata = await MuscleGroup.findByPk(req.params.id);
+    console.log(musclegroupdata);
+    console.log(req.params.id);
+    //serialize to only include data we need
+    const exercise = musclegroupdata.get({ plain: true });
+    res.render("workoutpage", exercise);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
