@@ -42,7 +42,7 @@ const loginFormHandler = async (event) => {
 
       if (response.ok) {
         // Redirect to the desired page after successful login
-        document.location.replace("/workout");
+        document.location.replace("workoutpage");
       } else {
         // Display an error message if login fails
         alert("Failed to log in");
