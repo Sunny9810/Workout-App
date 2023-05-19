@@ -60,4 +60,5 @@ router.get("/test", (req,res)=>{
 //   res.render("previous-workout")
 // });
 
+router
 module.exports = router;
