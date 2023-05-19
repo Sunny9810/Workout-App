@@ -107,7 +107,7 @@ Q:Will you be adding more to the website?
 
 A:Yes! you can send us your ideas/bug issues at GETFIT@mindyabusiness.com
 
-Q:what if i dont like the workout provided?
+Q:What if i dont like the workout provided?
 
 A:Choose a different workout! Theres plenty to choose from.
 
