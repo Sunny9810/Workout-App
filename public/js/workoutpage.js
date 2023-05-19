@@ -1,37 +1,8 @@
-// modal event listener
-
-var myModal = document.getElementById('exampleModal')
-//populate the modal content as desired
-document.getElementById('exampleModal').addEventListener('show.bs.modal', function (event) {
-    var button = event.relatedTarget;
-    var muscleData = button.getAttribute('data-muscle');
-    var muscle = JSON.parse(muscleData);
-  });
-
-// document.getElementById('exampleModal').addEventListener('show.bs.modal', function (event) {
-//     var button = event.relatedTarget;
-//     var muscleData = button.getAttribute('data-muscle');
-//     var muscle = JSON.parse(muscleData);
-  
-//     var modalBody = document.querySelector('.modal-body');
-//     modalBody.innerHTML = `
-//       <h2>${muscle.muscle_name}</h2>
-//       <p>${muscle.description}</p>
-//       <p>${muscle.exercises_id}</p>
-//     `;
-//   });
-  
-  
-// redirect button for cooldown page
-document.getElementById('redirect-btn').addEventListener('click', function(){
-    window.location.href = 'cooldownpage'
-});
-
 // carousel event listener
-const multipleItemCarousel =document.querySelector('#carouselExampleControls');
+var multipleItemCarousel =document.querySelector('#carouselExampleControls');
 
-if(window.matchMedia("(min-width:576px").matches){
-const multipleItemCarousel = new bootstrap.Carousel(multipleItemCarousel, {
+if(window.matchMedia("(min-width:576px)").matches){
+    var newCarousel = new bootstrap.Carousel(multipleItemCarousel, {
     interval: false,
 })
 
@@ -56,9 +27,25 @@ $('.carousel-control-prev').on('click', function(){
         600);
     }
 });
-}else{
-    $(multipleItemCarousel).addClass('slide');
 }
+else{
+    multipleItemCarousel.classList.add('slide');
+}
+
+// modal event listener
+
+var allModals = document.querySelectorAll('.modal-open')
+console.log(allModals);
+// populate the modal content as desired
+allModals.forEach(modal =>{
+    console.log(modal)
+    modal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.target);
+        var button = event.relatedTarget;
+        var muscleData = button.getAttribute('data-muscle');
+        var muscle = JSON.parse(muscleData);
+      });
+})
 
 
 //   const MuscleGroups = require("../../models/musclegroup")
