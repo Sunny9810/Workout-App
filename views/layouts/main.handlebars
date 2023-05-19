@@ -32,13 +32,13 @@
       </h1>
       {{#if logged_in}}
         <nav>
-          <button class="btn" id="login">Login</button>
-        </nav>
-        {{else}}
-        <nav>
           <a href="/login">
           <button id="login">logout</button>
           </a>
+        </nav>
+        {{else}}
+        <nav>
+          <button class="btn" id="login">Login</button>
         </nav>
       {{/if}}
     </header>
