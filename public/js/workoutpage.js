@@ -1,3 +1,9 @@
+// document.addEventListener('workoutpage', function() {
+//     const myModal = new Modal(document.getElementById('{{muscle}}modal'), {});
+//     myModal.show();
+//   });
+  
+
 // carousel event listener
 var multipleItemCarousel =document.querySelector('#carouselExampleControls');
 
@@ -31,6 +37,14 @@ $('.carousel-control-prev').on('click', function(){
 else{
     multipleItemCarousel.classList.add('slide');
 }
+
+
+var backbtn = document.querySelector('.previousPageLink')
+
+backbtn.addEventListener('click', function () {
+    console.log('click');
+    backbtn.classList.toggle('active');
+})
 
 // modal event listener
 // const myModal = document.getElementById('myModal')
