@@ -17,8 +17,14 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+    const imageList = [
+      { src: "/images/GetFitLogo.png", name: "logo" },
+      // Add more image objects to the array if needed
+    ];
+
     res.render("intro", {
       users,
+      imageList,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -28,6 +34,7 @@ router.get("/", async (req, res) => {
 
 router.get("/login", (req, res) => {
   if (req.session.logged_in) {
+    console.log("logged-in User:", req.session.user);
     res.redirect("/");
     return;
   }
@@ -35,12 +42,12 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/optionpg", (req, res) => {
-  res.render("optionpg");
+router.get("/optionpg", withAuth, (req, res) => {
+  res.render("optionpg", { logged_in: req.session.logged_in });
 });
 
 // !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //
-router.get("/cooldownpage", async (req, res) => {
+router.get("/cooldownpage", withAuth, async (req, res) => {
   res.render("cooldownpage");
 });
 
@@ -59,7 +66,7 @@ router.get("/cooldown/:id", async (req, res) => {
 });
 
 // !!!!!!!!!!!!!!!!!!WARM UP ROUTES !!!!!!!!!!!!!!!! //
-router.get("/warmuppage", async (req, res) => {
+router.get("/warmuppage", withAuth, async (req, res) => {
   res.render("warmuppage");
 });
 
@@ -79,7 +86,7 @@ router.get("/warmup/:id", async (req, res) => {
 
 // !!!!!!!!!!!!!!!!!!WORKOUTPAGE ROUTES !!!!!!!!!!!!!!!! //
 
-router.get("/workoutpage", async (req, res) => {
+router.get("/workoutpage", withAuth, async (req, res) => {
   res.render("workoutpage");
 });
 
