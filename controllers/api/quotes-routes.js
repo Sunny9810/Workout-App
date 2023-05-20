@@ -8,11 +8,11 @@ router.get("/", (req, res) => {
 });
 
 // get one quotes group
-router.get("/:id", (req, res) => {
-  // find a single quote by its `id'
-  Quotes.findOne().then((QuotesData) => {
-    res.json(QuotesData);
-  });
-});
+// router.get("/:id", (req, res) => {
+//   // find a single quote by its `id'
+//   Quotes.findOne().then((QuotesData) => {
+//     res.json(QuotesData);
+//   });
+// });
 
 module.exports = router;

@@ -12,13 +12,16 @@
   background-color: #7a9e9f;
 }
 
-#form-color {
+#form-color, #quote-area{
   background-color: #eef5db;
 }
+
+ 
 
 .btn-color {
   background-color: #fe5f55;
 }
+
 .row {
   /* background-color: white; */
   border-radius: 3px;
@@ -58,7 +61,11 @@ img {
   text-align: center;
 }
 
-#intro-font {
+.quote-text {
+  font-size: 2rem ;
+}
+
+#intro-font{
   font-size: 10rem;
   color: #e15b02;
 }
