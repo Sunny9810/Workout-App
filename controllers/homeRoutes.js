@@ -1,9 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../models');
 const withAuth = require('../utils/auth');
 const { Quotes } = require('../models');
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
-const withAuth = require("../utils/auth");
 const { route } = require("./api");
 
 // !!!!!!!!!!!!!!!!!!LOGIN ROUTES !!!!!!!!!!!!!!!! //
