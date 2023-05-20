@@ -1,10 +1,7 @@
 const router = require('express').Router();
-const { User } = require('../models');
 const withAuth = require('../utils/auth');
 const { Quotes } = require('../models');
-const router = require("express").Router();
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
-const withAuth = require("../utils/auth");
 const { route } = require("./api");
 
 // !!!!!!!!!!!!!!!!!!LOGIN ROUTES !!!!!!!!!!!!!!!! //
@@ -111,7 +108,7 @@ router.get('/warmup', async (req, res) => {
 router.get("/workoutpage/:id", async (req, res) => {
   try {
     //search db for exercise(or mgroup?) with id that matches params
-    const musclegroupdata = await MuscleGroup.findByPk(req.params.id);
+    const musclegroupdata = await MuscleGroup.findByPk(req.params.id, {include: Exercises, });
     console.log(musclegroupdata);
     console.log(req.params.id);
     //serialize to only include data we need
