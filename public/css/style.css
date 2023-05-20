@@ -12,13 +12,16 @@
   background-color: #7a9e9f;
 }
 
-#form-color {
+#form-color, #quote-area{
   background-color: #eef5db;
 }
+
+ 
 
 .btn-color {
   background-color: #fe5f55;
 }
+
 .row {
   /* background-color: white; */
   border-radius: 3px;
@@ -58,275 +61,138 @@ img {
   text-align: center;
 }
 
-#intro-font {
+.quote-text {
+  font-size: 2rem ;
+}
+
+#intro-font{
   font-size: 10rem;
-  color: #fe5f55;
+  color: #e15b02;
 }
 
 #getfit-title {
   font-size: 4rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Sunny's working page */
-#previous-workout{
-  background-color:#eef5db;
+.logo {
+  width: 35rem;
 }
 
+/* Sunny's working page */
+#previous-workout {
+  background-color: #eef5db;
+}
 
-.card{
+.card {
   padding: 20px;
   margin-bottom: 20px;
 }
 
-#warm-up{
+#warm-up {
   background-color: #b8d8d8;
 }
 
-#todays-workout{
+#todays-workout {
   background-color: #b8d8d8;
 }
 
-#cool-down{
+#cool-down {
   background-color: #b8d8d8;
 }
-
 
 @media (max-width: 767px) {
   .optionpg {
     width: 100%;
     margin: 0px;
     padding: 40px;
-  
   }
   .card {
     width: 100%;
     margin: 10px;
-    padding:10px;
-    
+    padding: 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* abigail's section for workout page */
 /* h1{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 } */
 
-image-wrapper{
+image-wrapper {
   max-width: 100%;
   height: 17em;
   display: flex;
   justify-content: center;
 }
-img{
+img {
   max-width: 100%;
-  max-height: 100%
+  max-height: 100%;
 }
 @media screen and (min-width: 576px) {
-  .carousel-inner{
+  .carousel-inner {
     display: flex;
   }
-  .carousel-item{
+  .carousel-item {
     display: block;
     margin-right: 0;
-    flex: 0 0 calc(100%/3);
+    flex: 0 0 calc(100% / 3);
   }
 }
-.carousel-inner{
+.carousel-inner {
   padding: 1em;
 }
-.card{
-  margin: 0 .5em;
+.card {
+  margin: 0 0.5em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* abigail's section for workout page */
 /* h1{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 } */
 
+<<<<<<< HEAD
 .image-wrapper{
+=======
+image-wrapper {
+>>>>>>> 5c19b538c5b12e08b05b362e6cfb3f621f0e124e
   max-width: 100%;
   height: 65vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-img{
+img {
   max-width: 100%;
-  max-height: 100%
+  max-height: 100%;
 }
 @media screen and (min-width: 576px) {
-  .carousel-inner{
+  .carousel-inner {
     display: flex;
   }
-  .carousel-item{
+  .carousel-item {
     display: block;
     margin-right: 0;
-    flex: 0 0 calc(100%/3);
+    flex: 0 0 calc(100% / 3);
   }
   .image-wrapper{
     max-height: 23vw;
   }
 }
-.carousel-inner{
+.carousel-inner {
   padding: 1em;
 }
+<<<<<<< HEAD
 .card{
   margin: 0 .5em;
   border-radius: 0;
   box-shadow: 2px 6px 8px 0px rgba(22, 22, 26, .18);
 }
+=======
+.card {
+  margin: 0 0.5em;
+}
+
+#intro-text {
+  font-size: 2rem;
+}
+>>>>>>> 5c19b538c5b12e08b05b362e6cfb3f621f0e124e

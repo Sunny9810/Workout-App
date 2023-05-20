@@ -28,13 +28,23 @@ app.use(session(sess));
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
-app.use(express.static("images"));
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static("images"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "images")));
 
 app.use(routes);
+
+app.get("/static", (req, res) => {
+  res.render("static");
+});
+
+app.get("/", (req, res) => {
+  imageList = [];
+  imageList.push({ src: "images/GetFitLogo.png", name: "logo" });
+  res.render("/", { imageList: imageList });
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
