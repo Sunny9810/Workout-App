@@ -1,8 +1,4 @@
 const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('../utils/auth');
-const { Quotes } = require('../models');
-const router = require("express").Router();
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
 const withAuth = require("../utils/auth");
 const { route } = require("./api");
@@ -42,7 +38,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
-router.get("/optionpg", withAuth, (req, res) => {
+router.get("/optionpg", (req, res) => {
   res.render("optionpg", { logged_in: req.session.logged_in });
 });
 
@@ -66,8 +62,8 @@ router.get("/cooldown/:id", async (req, res) => {
 });
 
 // !!!!!!!!!!!!!!!!!!WARM UP ROUTES !!!!!!!!!!!!!!!! //
-router.get("/warmuppage", withAuth, async (req, res) => {
-  res.render("warmuppage");
+router.get("/warmup", async (req, res) => {
+  res.render("warmup");
 });
 
 router.get("/warmup/:id", async (req, res) => {
