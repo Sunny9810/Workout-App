@@ -14,14 +14,14 @@
   </div>
   <div class="card-body">
     <h5 class="card-title" id="intro-font">GET FIT</h5>
-    <p class="card-text">
+    <p class="card-text" id="intro-text">
       <a id="getfit-title">What is GetFit?</a>
       <br />
       Workout should be easy and accessible for everyone. With GetFit, you can
       easily track your workouts, set goals, and stay motivated on your fitness
       journey. Whether you're a beginner or a fitness enthusiast, GetFit is the
       perfect app to help you reach your goals. Sign up now and start your
-      fitness journey today!" For best result make sure you have a gym
+      fitness journey today! For best result make sure you have a gym
       membership, comfortable workout clothes and shoes,basic fitness equipment
       and, of course, a willingness to commit to your fitness journey.</p>
     {{! <a href="#" class="btn btn-primary">Go somewhere</a> }}
@@ -31,7 +31,7 @@
   </div>
 </div>
 <section class="form my-4 mx-5" id="form-color">
-  <div class="container">
+  <div class="container shadow-danger shadow-intensity-xl">
     <div class="row no-gutters">
       <div class="col-lg-6">
         <div class="col-lg-10 px-5 pt-5">
@@ -77,7 +77,7 @@
                 >Signup</button>
               </div>
             </div>
-            <p>Already have an account? <a href="#">Sign in here</a></p>
+            {{! <p>Already have an account? <a href="#">Sign in here</a></p> }}
           </form>
         </div>
       </div>
@@ -115,10 +115,11 @@
             </div>
           </div>
           <a href="#">Forgot Password</a>
-          <p>Dont have an account? <a href="#">Sign up</a></p>
+          {{! <p>Dont have an account? <a href="#">Sign up</a></p> }}
         </form>
       </div>
     </div>
   </div>
 </section>
 <script src="./js/login.js"></script>
+<script src="./js/logout.js"></script>
