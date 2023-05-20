@@ -13,8 +13,14 @@ router.get("/", async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
+    const imageList = [
+      { src: "/images/GetFitLogo.png", name: "logo" },
+      // Add more image objects to the array if needed
+    ];
+
     res.render("intro", {
       users,
+      imageList,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -32,7 +38,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/optionpg", (req, res) => {
-  res.render("optionpg");
+  res.render("optionpg", { logged_in: req.session.logged_in });
 });
 
 // !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //

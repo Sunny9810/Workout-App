@@ -13,7 +13,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("optionpg");
+      alert("Successfully Signed Up! Please proceed to Log in");
     } else {
       alert("Failed to sign up.");
     }
