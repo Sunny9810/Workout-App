@@ -23,4 +23,5 @@ todaysWorkoutCard.addEventListener("click", function () {
 
 coolDownCard.addEventListener("click", function () {
   coolDownCard.classList.toggle("active");
+  document.location.replace("cooldown");
 });

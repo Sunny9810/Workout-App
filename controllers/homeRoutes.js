@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const { User, MuscleGroup, Exercises, Quotes } = require("../models");
 const { route } = require("./api");
+const withAuth = require('../utils/auth');
+
+
 
 // !!!!!!!!!!!!!!!!!!LOGIN ROUTES !!!!!!!!!!!!!!!! //
 router.get("/", async (req, res) => {
@@ -42,8 +45,8 @@ router.get("/optionpg", (req, res) => {
 });
 
 // !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //
-router.get("/cooldownpage", withAuth, async (req, res) => {
-  res.render("cooldownpage");
+router.get("/cooldown", withAuth, async (req, res) => {
+  res.render("cooldown", {logged_in: req.session.logged_in});
 });
 
 router.get("/cooldown/:id", async (req, res) => {
@@ -54,15 +57,32 @@ router.get("/cooldown/:id", async (req, res) => {
     console.log(req.params.id);
     //serialize to only include data we need
     const exercise = cooldowngroupdata.get({ plain: true });
-    res.render("cooldownpage", exercise);
+    res.render("cooldown", {exercise, logged_in: req.session.logged_in,});
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // !!!!!!!!!!!!!!!!!!WARM UP ROUTES !!!!!!!!!!!!!!!! //
-router.get("/warmup", async (req, res) => {
-  res.render("warmup");
+
+router.get('/warmup', withAuth, async (req, res) => {
+  try {
+    // Get all projects and JOIN with user data
+    const projectData = await Quotes.findAll();
+    const exercisesData= await Exercises.findAll()
+    // Serialize data so the template can read it
+    const quotes = projectData.map((project) => project.get({ plain: true }));
+    const exercises = exercisesData.map((exercise) => exercise.get({ plain: true }));
+
+    // Pass serialized data and session flag into template
+    res.render('warmup', { 
+     quotes,
+     exercises,
+     logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/warmup/:id", async (req, res) => {
@@ -82,26 +102,10 @@ router.get("/warmup/:id", async (req, res) => {
 // !!!!!!!!!!!!!!!!!!WORKOUTPAGE ROUTES !!!!!!!!!!!!!!!! //
 
 router.get("/workoutpage", withAuth, async (req, res) => {
-  res.render("workoutpage");
+  res.render("workoutpage", {logged_in: req.session.logged_in,});
 });
 
 
-router.get('/warmup', async (req, res) => {
-    try {
-      // Get all projects and JOIN with user data
-      const projectData = await Quotes.findAll();
-  
-      // Serialize data so the template can read it
-      const quotes = projectData.map((project) => project.get({ plain: true }));
-  
-      // Pass serialized data and session flag into template
-      res.render('warmup', { 
-       quotes,
-      });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
 
 router.get("/workoutpage/:id", async (req, res) => {
   try {
@@ -111,7 +115,7 @@ router.get("/workoutpage/:id", async (req, res) => {
     console.log(req.params.id);
     //serialize to only include data we need
     const exercise = musclegroupdata.get({ plain: true });
-    res.render("workoutpage", exercise);
+    res.render("workoutpage", {exercise, logged_in: req.session.logged_in,});
   } catch (err) {
     res.status(500).json(err);
   }

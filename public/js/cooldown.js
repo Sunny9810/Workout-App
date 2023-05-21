@@ -21,7 +21,7 @@ const quoteWarmUp =() =>{
 
 
 const exercisesWarmUp1 =() =>{
-    fetch("/api/exercises/21",{
+    fetch("/api/exercises/24",{
         method: "GET",
         cache: "reload",
         // body: JSON.stringify({ quotes }),
@@ -40,7 +40,7 @@ const exercisesWarmUp1 =() =>{
 };
 
 const exercisesWarmUp2 =() =>{
-    fetch("/api/exercises/22",{
+    fetch("/api/exercises/25",{
         method: "GET",
         cache: "reload",
         // body: JSON.stringify({ quotes }),
@@ -60,7 +60,7 @@ const exercisesWarmUp2 =() =>{
 
 
 const exercisesWarmUp3 =() =>{
-    fetch("/api/exercises/23",{
+    fetch("/api/exercises/26",{
         method: "GET",
         cache: "reload",
         // body: JSON.stringify({ quotes }),
@@ -79,7 +79,7 @@ const exercisesWarmUp3 =() =>{
 
 
 const muscleGroupDes =() =>{
-    fetch("/api/mgroups/6",{
+    fetch("/api/mgroups/7",{
         method: "GET",
         cache: "reload",
         // body: JSON.stringify({ quotes }),
@@ -101,7 +101,3 @@ exercisesWarmUp1();
 exercisesWarmUp2();
 exercisesWarmUp3();
 muscleGroupDes();
-
-
-
-

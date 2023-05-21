@@ -15,7 +15,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: Exercises,
+    attributes: ['muscle_name', 'description']
   }).then((musclegroupData) => {
     res.json(musclegroupData);
   });
