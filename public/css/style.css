@@ -174,3 +174,24 @@ img {
 }
 
 
+#today-workout-btn{
+  background-color: #7a9e9f;
+  font-size: 4rem;
+}
+
+#back-to-option{
+  background-color: #7a9e9f;
+  font-size: 4rem;
+}
+
+
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}

@@ -1,3 +1,12 @@
+
+let optionBtn= document.querySelector("#back-to-option");
+
+
+optionBtn.addEventListener("click", function () {
+    document.location.replace("optionpg")
+  });
+
+
 const quoteWarmUp =() =>{
     fetch("/api/quotes",{
         method: "GET",
