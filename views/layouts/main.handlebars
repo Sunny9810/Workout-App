@@ -46,7 +46,7 @@
       {{/each}}
 
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="container container-fluid mt-5 fade-in">
       {{{body}}}
     </main>
     <footer>
@@ -54,5 +54,12 @@
     {{#if logged_in}}
       <script src="/js/logout.js"></script>
     {{/if}} 
+
+    <script>
+
+  $(document).ready(function() {
+    $('.fade-in').addClass('visible');
+  });
+</script>
   </body>
 </html>
