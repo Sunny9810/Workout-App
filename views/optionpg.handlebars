@@ -3,9 +3,14 @@
   <div class="previous-workout card" id="previous-workout">
     <div class="card-body">
       <h2 class ="card-title">Previous Workout</h2>
-      <p class="card-text">{{previousWorkout}}</p>
+      {{#each previousWorkout}}
     </div>
+    <p>Date:{{date}}</p>
+    <p>Exercise: {{exercise}}</p>
   </div>
+  {{/each}}
+
+  
   <div class="warm-up card" id="warm-up">
     <div class ="card-body">
     <h2 class ="card-title">Warm-Up</h2>

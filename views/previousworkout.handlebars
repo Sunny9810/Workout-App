@@ -1,1 +1,14 @@
 <div> previous-workout</div>
+
+<div id="exercise-list">
+  {{#each exercises}}
+  <div class="exercise">
+    <h3>{{name}}</h3>
+    <p>Category: {{category}}</p>
+    <p>Description: {{description}}</p>
+  </div>
+  {{/each}}
+</div>
+
+
+
