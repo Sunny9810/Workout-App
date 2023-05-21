@@ -43,8 +43,19 @@ app.get("/static", (req, res) => {
 app.get("/", (req, res) => {
   imageList = [];
   imageList.push({ src: "images/GetFitLogo.png", name: "logo" });
+  imagelist.push({src: "images/jumping-jack.jpeg", name: "jumpingjack"})
   res.render("/", { imageList: imageList });
 });
+
+
+// app.get("/", (req, res) => {
+//   const imageList = [
+//     { src: "images/GetFitLogo.png", name: "logo" },
+//     { src: "images/jumping-jack.jpeg", name: "jumpingjack" }
+//   ];
+
+//   res.render("/", { imageList });
+// });
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
