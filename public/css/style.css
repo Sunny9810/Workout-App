@@ -68,8 +68,18 @@ img {
 #intro-font{
   font-size: 10rem;
   color: #e15b02;
+  text-decoration: underline;
 }
 
+#intro-font1{
+  font-size: 7rem;
+  color: #e15b02;
+}
+
+#intro-font2{
+  font-size: 7rem;
+  color: rgb(10, 90, 210)
+}
 #getfit-title {
   font-size: 4rem;
 }
@@ -89,16 +99,21 @@ img {
 }
 
 #warm-up {
-  background-color: #b8d8d8;
+  background-color: #e15b02;
+}
+
+
+#cool-down{
+  background-color: rgb(10, 90, 210);
 }
 
 #todays-workout {
   background-color: #b8d8d8;
 }
 
-#cool-down {
+/* #cool-down {
   background-color: #b8d8d8;
-}
+} */
 
 @media (max-width: 767px) {
   .optionpg {
@@ -150,11 +165,7 @@ img {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 } */
 
-<<<<<<< HEAD
-.image-wrapper{
-=======
 image-wrapper {
->>>>>>> 5c19b538c5b12e08b05b362e6cfb3f621f0e124e
   max-width: 100%;
   height: 65vw;
   display: flex;
@@ -181,18 +192,13 @@ img {
 .carousel-inner {
   padding: 1em;
 }
-<<<<<<< HEAD
 .card{
   margin: 0 .5em;
   border-radius: 0;
   box-shadow: 2px 6px 8px 0px rgba(22, 22, 26, .18);
 }
-=======
-.card {
-  margin: 0 0.5em;
-}
 
-#intro-text {
-  font-size: 2rem;
-}
->>>>>>> 5c19b538c5b12e08b05b362e6cfb3f621f0e124e
+
+
+
+
