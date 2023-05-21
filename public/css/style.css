@@ -12,13 +12,16 @@
   background-color: #7a9e9f;
 }
 
-#form-color {
+#form-color, #quote-area{
   background-color: #eef5db;
 }
+
+ 
 
 .btn-color {
   background-color: #fe5f55;
 }
+
 .row {
   /* background-color: white; */
   border-radius: 3px;
@@ -58,11 +61,25 @@ img {
   text-align: center;
 }
 
-#intro-font {
+.quote-text {
+  font-size: 2rem ;
+}
+
+#intro-font{
   font-size: 10rem;
+  color: #e15b02;
+  text-decoration: underline;
+}
+
+#intro-font1{
+  font-size: 7rem;
   color: #e15b02;
 }
 
+#intro-font2{
+  font-size: 7rem;
+  color: rgb(10, 90, 210)
+}
 #getfit-title {
   font-size: 4rem;
 }
@@ -82,16 +99,21 @@ img {
 }
 
 #warm-up {
-  background-color: #b8d8d8;
+  background-color: #e15b02;
+}
+
+
+#cool-down{
+  background-color: rgb(10, 90, 210);
 }
 
 #todays-workout {
   background-color: #b8d8d8;
 }
 
-#cool-down {
+/* #cool-down {
   background-color: #b8d8d8;
-}
+} */
 
 @media (max-width: 767px) {
   .optionpg {
@@ -106,16 +128,18 @@ img {
   }
 }
 
+
 /* abigail's section for workout page */
 /* h1{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 } */
 
-image-wrapper {
+/* .image-wrapper {
   max-width: 100%;
-  height: 17em;
+  height: 65vw;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 img {
   max-width: 100%;
@@ -130,46 +154,23 @@ img {
     margin-right: 0;
     flex: 0 0 calc(100% / 3);
   }
+  .image-wrapper{
+    max-height: 23vw;
+  }
 }
 .carousel-inner {
   padding: 1em;
 }
-.card {
-  margin: 0 0.5em;
-}
-
-/* abigail's section for workout page */
-/* h1{
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.card{
+  margin: 0 .5em;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0px rgba(22, 22, 26, .18);
 } */
 
-image-wrapper {
-  max-width: 100%;
-  height: 17em;
-  display: flex;
-  justify-content: center;
-}
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-@media screen and (min-width: 576px) {
-  .carousel-inner {
-    display: flex;
-  }
-  .carousel-item {
-    display: block;
-    margin-right: 0;
-    flex: 0 0 calc(100% / 3);
-  }
-}
-.carousel-inner {
-  padding: 1em;
-}
-.card {
-  margin: 0 0.5em;
+#workout-title{
+  font-size: xx-large;
+  font-weight: 600;
+  color: #e15b02;
 }
 
-#intro-text {
-  font-size: 2rem;
-}
+

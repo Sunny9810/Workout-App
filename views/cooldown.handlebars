@@ -1,0 +1,59 @@
+<div class="card text-center" id="quote-area">
+        <div class="card-body" id="quote-card">
+        <h5 class="card-title" id="intro-font">GET FIT</h5>
+        <h2>Hear this...</h2>
+        {{!-- {{#each quotes as |quote|}} --}}
+        <div id="quotebody" class="card mb-3">
+            <blockquote class="quote">
+                <p class="quote-text"></p>
+            </blockquote>
+        </div>
+    <div class="card-body" id="quote-card">
+        <h6 class="card-title" id="intro-font2">COOLDOWN</h6>
+        <h2>Description:</h2>
+        {{!-- {{#each quotes as |quote|}} --}}
+        <div id="quotebody" class="card mb-3">
+            <blockquote class="quote">
+                <p class="quote-text" id="musclegroup"></p>
+            </blockquote>
+        </div>
+        {{!-- {{/each}} --}}
+    </div>
+</div>
+
+{{!-- {{#each exercises}} --}}
+<div class="justify-content-between" id="warmup">
+    <div class="row align-items-center ">
+        <div class="col">
+            <div class="card bg-info">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title one" id="titleone"></h5>
+                    <p class="card-text" id="workout-des1"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-info">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title" id="titletwo" ></h5>
+                    <p class="card-text" id="workout-des2"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-info">
+                <div class="card-body" id="warmup-card">
+                    <h5 class="card-title three" id="titlethree" ></h5>
+                    <p class="card-text" id="workout-des3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- {{/each}} --}}
+<footer>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn" type="button">On To Todays Workout!</button>
+    </div>
+</footer>
+<script src="./js/cooldown.js"></script>

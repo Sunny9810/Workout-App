@@ -26,6 +26,7 @@ previousWorkoutCard.addEventListener("click", function () {
 
 warmUpCard.addEventListener("click", function () {
   warmUpCard.classList.toggle("active");
+  document.location.replace("warmup")
 });
 
 todaysWorkoutCard.addEventListener("click", function () {
@@ -35,4 +36,5 @@ todaysWorkoutCard.addEventListener("click", function () {
 
 coolDownCard.addEventListener("click", function () {
   coolDownCard.classList.toggle("active");
+  document.location.replace("cooldown");
 });

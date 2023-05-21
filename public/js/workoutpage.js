@@ -1,67 +1,39 @@
+// document.addEventListener('workoutpage', function() {
+//     const myModal = new Modal(document.getElementById('{{muscle}}modal'), {});
+//     myModal.show();
+//   });
+
 // modal event listener
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
 
-// var myModal = document.getElementById('myModal')
-
-// myModal.addEventListener('show.bs.modal', function (event) {
-//   if (!data) {
-//     return event.preventDefault() // stops modal from being shown
-//   }
-// })
-
-// carousel event listener
-
-// if (window.matchMedia("(min-width: 576px)").matches) {
-//     var carouselWidth = document.querySelector('.carousel-inner').scrollWidth;
-//     var cardWidth = document.querySelector('.carousel-item').offsetWidth;
-//     var scrollPosition = 0;
-  
-//     document.querySelector('.carousel-control-next').addEventListener('click', function() {
-//       if (scrollPosition < (carouselWidth - (cardWidth * 4))) {
-//         console.log('next');
-//         scrollPosition = scrollPosition + cardWidth;
-//         document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//       }
-//     });
-  
-//     document.querySelector('.carousel-control-prev').addEventListener('click', function() {
-//       if (scrollPosition > 0) {
-//         console.log('previous');
-//         scrollPosition = scrollPosition - cardWidth;
-//         document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//       }
-//     });
-//   } else {
-//     document.addEventListener('click', function(event) {
-//       var target = event.target;
-//       if (target.classList.contains('carousel-control-next')) {
-//         if (scrollPosition < (carouselWidth - (cardWidth * 4))) {
-//           console.log('next');
-//           scrollPosition = scrollPosition + cardWidth;
-//           document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//         }
-//       } else if (target.classList.contains('carousel-control-prev')) {
-//         if (scrollPosition > 0) {
-//           console.log('previous');
-//           scrollPosition = scrollPosition - cardWidth;
-//           document.querySelector('.carousel-inner').scrollLeft = scrollPosition;
-//         }
-//       }
-//     });
-//   }
+var allModals = document.querySelectorAll('.modal-open')
+console.log(allModals);
+// populate the modal content as desired
+allModals.forEach(modal =>{
+    console.log(modal)
+    modal.addEventListener('show.bs.modal', function (event) {
+        console.log(event.target);
+        var button = event.relatedTarget;
+        var muscleData = button.getAttribute('data-muscle');
+        var muscle = JSON.parse(muscleData);
+      });
+})
 
 
-  // const MuscleGroups = require("../../models/musclegroup")
+// const exerciseDatabase = {
+//     method: 'GET',
+// };
 
-//getting one muscle group with specific data
-router.get("//:id", async (req,res) => {
-    try {
-        //search db for exercise(or mgroup?) with id that matches params
-        const musclegroupdata = await MuscleGroups.findByPk(req.params.id)
-        console.log(musclegroupdata);
-        //serialize to only include data we need
-        const exercise = musclegroupdata.get({ plain: true });
-        res.render("workoutpage", exercise);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// fetch(exerciseDatabase)
+//     .then(response => response.json())
+//     .then(data => {
+//         const exerciseSeedsArray = Array.from(data.results);
+//         const filteredArray = [];
+//         for (let i = 0;) {
+//             filteredArray.push(exerciseSeedsArray[i]);
+//         };
+
+//     })
+//   const MuscleGroups = require("../../models/musclegroup")
+
