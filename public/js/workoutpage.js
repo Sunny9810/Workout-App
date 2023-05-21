@@ -21,5 +21,19 @@ allModals.forEach(modal =>{
 })
 
 
+// const exerciseDatabase = {
+//     method: 'GET',
+// };
+
+// fetch(exerciseDatabase)
+//     .then(response => response.json())
+//     .then(data => {
+//         const exerciseSeedsArray = Array.from(data.results);
+//         const filteredArray = [];
+//         for (let i = 0;) {
+//             filteredArray.push(exerciseSeedsArray[i]);
+//         };
+
+//     })
 //   const MuscleGroups = require("../../models/musclegroup")
 

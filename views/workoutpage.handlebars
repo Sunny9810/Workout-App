@@ -19,7 +19,7 @@
 </div>
   <!-- Modal; will appear when button for exercise is clicked-->
   {{#each MuscleGroups as |muscle|}}
-  <div class="modal fade" id="{{this}}Modal" tabindex="-1" aria-labelledby="{{this}}ModalLabel" aria-hidden="true">
+  <div class="modal fade" id="Modal{{@muscle}}" tabindex="-1" aria-labelledby="{{this}}ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
