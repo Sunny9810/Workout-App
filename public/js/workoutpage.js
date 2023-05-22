@@ -11,12 +11,19 @@ const chestAndTricep =() =>{
       let chestTitle1 = document.querySelector(".pushups");
       let chestTitle2 = document.querySelector(".chestflys");
       let chestTitle3 = document.querySelector(".mball")
+      let chestDes = document.querySelector(".dbdes");
+      let chestDes1 = document.querySelector(".pushdes");
+      let chestDes2 = document.querySelector(".cfdes");
+      let chestDes3 = document.querySelector(".mdes");
 
       chestTitle.textContent= data[0].exercise_name;
       chestTitle1.textContent= data[1].exercise_name;
       chestTitle2.textContent=data[2].exercise_name;
       chestTitle3.textContent=data[3].exercise_name;
-      
+      chestDes.textContent=data[0].description;
+      chestDes1.textContent=data[1].description;
+      chestDes2.textContent=data[2].descripiton;
+      chestDes3.textContent=data[3].description;
       // data.exercises.forEach((exercise) => {
       //   const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
       //   const description = `<p>${exercise.description}</p>`;
@@ -39,11 +46,19 @@ const backAndBicep =() =>{
       let backTitle2 = document.querySelector('.reversefly');
       let backTitle3 = document.querySelector(".closegrip");
       let backTitle4 = document.querySelector(".superman");
+      let backDesc= document.querySelector(".description1");
+      let backDesc1=document.querySelector(".rfdesc");
+      let backDes2=document.querySelector(".cgdesc");
+      let backDes3=document.querySelector(".smdesc");
 
       backTitle.textContent= data[0].exercise_name;
       backTitle2.textContent= data[1].exercise_name;
       backTitle3.textContent= data[2].exercise_name;
       backTitle4.textContent= data[3].exercise_name;
+      backDesc.textContent=data[0].description;
+      backDesc1.textContent=data[1].descripiton;
+      backDes2.textContent=data[2].descripiton;
+      backDes3.textContent=data[3].descripiton;
       // workoutDesc1.textContent= data.description.sets.reps;
     });
 };
