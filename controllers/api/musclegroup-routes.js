@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { MuscleGroup, Exercises, Quotes } = require("../../models");
+const MuscleGroups = require("../../models/musclegroup");
 
 router.get("/", (req, res) => {
   MuscleGroup.findAll({ include: Exercises }).then((MuscleGroupData) => {
@@ -20,6 +21,7 @@ router.get("/:id", (req, res) => {
     res.json(musclegroupData);
   });
 });
+
 
 module.exports = router;
 
