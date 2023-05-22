@@ -1,10 +1,6 @@
 
-let optionBtn= document.querySelector("#back-to-option");
 
-
-optionBtn.addEventListener("click", function () {
-    document.location.replace("optionpg")
-  });
+  
 
 
 // const quoteWarmUp =() =>{
@@ -110,6 +106,75 @@ const muscleGroupDes =() =>{
     });
 };
 
+
+// let getQuotes =() =>{
+//     fetch("/api/quotes/create",{
+//         method: "POST",
+//         cache: "reload",
+//       body: JSON.stringify({ id,quotes }),
+//       headers: { "Content-Type": "application/json" },
+//     })
+//         .then(function(response){
+//             return response.json();
+//     }).then((data)=>{
+//         let quote=document.querySelector("quote-input");
+
+//         quote.value= data.description;
+//     });
+// };
+// const saveQuote = (quote) => {
+//     fetch("/api/quotes", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ quotes: quote }),
+//     })
+//       .then((response) => {
+//         if (response.ok) {
+//           console.log("Quote saved successfully.");
+//         } else {
+//           console.log("Failed to save quote.");
+//         }
+//       })
+//       .catch((error) => {
+//         console.error("An error occurred while saving the quote:", error);
+//       });
+//   };
+
+const saveQuote = () => {
+    const quoteInput = document.querySelector("#quote-input");
+    const quote = quoteInput.value;
+    fetch("/api/quotes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ quotes: quote }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log("Quote saved successfully.");
+          // Optionally, you can clear the input field after saving the quote
+          quoteInput.value = "";
+        } else {
+          console.log("Failed to save quote.");
+        }
+      })
+      .catch((error) => {
+        console.error("An error occurred while saving the quote:", error);
+      });
+  };
+  const saveButton = document.querySelector("#save-button");
+  saveButton.addEventListener("click", saveQuote);
+  
+let optionBtn= document.querySelector("#back-to-option");
+// let saveBtn= document.querySelector("#save-button");
+
+
+optionBtn.addEventListener("click", function () {
+    document.location.replace("optionpg")
+  });
+
+//   saveBtn.addEventListener("click", function () {
+//     saveQuote(quote)
+//   });
 
 
 // quoteWarmUp();

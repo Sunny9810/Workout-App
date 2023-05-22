@@ -26,6 +26,19 @@ router.get("/:id", (req, res) => {
   });
 });
 
+//POSTING QUOTES
 
+router.post("/create", (req,res)=>{
+  Quotes.create({
+  //  id:req.body.id,
+   quotes:req.body.quotes,
+  })
+  .then((newQuotes)=>{
+    res.json(newQuotes);
+  })
+  .catch((err) =>{
+    res.json(err);
+  })
+});
 
 module.exports = router;
