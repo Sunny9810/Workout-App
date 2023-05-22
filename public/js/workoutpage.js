@@ -1,3 +1,4 @@
+//  fetch function for chest and triceps
 const chestAndTricep =() =>{
   fetch("/api/mgroups/1", {
     method: 'GET',
@@ -24,14 +25,10 @@ const chestAndTricep =() =>{
       chestDes1.textContent=data[1].description;
       chestDes2.textContent=data[2].descripiton;
       chestDes3.textContent=data[3].description;
-      // data.exercises.forEach((exercise) => {
-      //   const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
-      //   const description = `<p>${exercise.description}</p>`;
-      //   workoutDesc2.innerHTML += setsAndReps + description;
-      // });
      });
 };
 
+// fetch function for back
 const backAndBicep =() =>{
   fetch("/api/mgroups/2",{
     method: "GET",
@@ -64,6 +61,7 @@ const backAndBicep =() =>{
 };
 
 
+// fetch function for shoulders
 const shoulders =() =>{
   fetch("/api/mgroups/5",{
     method: "GET",
@@ -94,6 +92,8 @@ const shoulders =() =>{
     });
 };
 
+
+// fetch funciton for legs
 const quads =() =>{
   fetch("/api/mgroups/3",{
     method: "GET",
@@ -122,7 +122,9 @@ const quads =() =>{
     });
 };
 
-const glutesAndHams =()=>{
+
+// fetch function for arms 
+const bicepsTriceps =()=>{
   fetch("/api/mgroups/4",{
     method: "GET",
     cache: "reload",
@@ -157,71 +159,6 @@ chestAndTricep();
 backAndBicep();
 shoulders();
 quads();
-glutesAndHams();
+bicepsTriceps();
 
-
-
-
-
-
-
-
-// document.addEventListener('workoutpage', function() {
-//     const myModal = new Modal(document.getElementById('{{muscle}}modal'), {});
-//     myModal.show();
-//   });
-
-// modal event listener
-// const myModal = document.getElementById('myModal')
-// const myInput = document.getElementById('myInput')
-
-// var allModals = document.querySelectorAll('.modal-open')
-// console.log(allModals);
-// // populate the modal content as desired
-// allModals.forEach(modal =>{
-//     console.log(modal)
-//     modal.addEventListener('show.bs.modal', function (event) {
-//         console.log(event.target);
-//         var button = event.relatedTarget;
-//         var muscleData = button.getAttribute('data-muscle');
-//         var muscle = JSON.parse(muscleData);
-//       });
-// })
-
-
-// $(document).ready(function(){
-//   $("#myBtn").click(function(){
-//     $("#myModal").modal({backdrop: true});
-//   });
-// });
-
-
-//  // Attach click event to exercise card
-//  const exerciseCards = document.querySelectorAll('.exercise-card');
-//  exerciseCards.forEach(card => {
-//    card.addEventListener('click', (event) => {
-//      // Get exercise ID from card
-//      const exerciseId = card.getAttribute('data-exercise-id');
-     
-//      // Fetch exercise data by ID
-//      fetch(`/api/exercises/${exerciseId}`)
-//        .then(response => response.json())
-//        .then(exercise => {
-//          // Populate modal with exercise data
-//          const modalTitle = document.querySelector('.modal-title');
-//          modalTitle.innerText = exercise.exercise_name;
-         
-//          const exerciseDesc = document.querySelector('.exercise-desc');
-//          exerciseDesc.innerText = exercise.description;
-         
-//          // Show the modal
-//          const exerciseModal = new bootstrap.Modal(document.querySelector('#exampleModal'));
-//          exerciseModal.show();
-//        })
-//        .catch(error => console.error(error));
-//    });
-//  });
-
-
-//   const MuscleGroups = require("../../models/musclegroup")
 
