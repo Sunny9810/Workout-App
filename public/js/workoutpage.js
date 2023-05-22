@@ -7,10 +7,15 @@ const chestAndTricep =() =>{
     .then(function(response){
       return response.json();
     }).then((data) => {
-      let chestTitle = document.querySelector(".chestandtris");
-      let workoutDesc2 = document.querySelector(".exercise-desc2");
+      let chestTitle = document.querySelector(".dbpress");
+      let chestTitle1 = document.querySelector(".pushups");
+      let chestTitle2 = document.querySelector(".chestflys");
+      let chestTitle3 = document.querySelector(".mball")
 
       chestTitle.textContent= data[0].exercise_name;
+      chestTitle1.textContent= data[1].exercise_name;
+      chestTitle2.textContent=data[2].exercise_name;
+      chestTitle3.textContent=data[3].exercise_name;
       
       // data.exercises.forEach((exercise) => {
       //   const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
@@ -31,15 +36,42 @@ const backAndBicep =() =>{
     }).then((data) => {
       console.log(data)
       let backTitle = document.querySelector(".backandbis");
-      let workoutDesc1 = document.querySelector('.exercise-desc');
+      let backTitle2 = document.querySelector('.reversefly');
+      let backTitle3 = document.querySelector(".closegrip");
+      let backTitle4 = document.querySelector(".superman");
 
       backTitle.textContent= data[0].exercise_name;
+      backTitle2.textContent= data[1].exercise_name;
+      backTitle3.textContent= data[2].exercise_name;
+      backTitle4.textContent= data[3].exercise_name;
       // workoutDesc1.textContent= data.description.sets.reps;
     });
 };
 
 
 const shoulders =() =>{
+  fetch("/api/mgroups/5",{
+    method: "GET",
+    cache: "reload",
+    headers: { "Content-Type": "application/json"},
+  })
+    .then(function(response){
+      return response.json();
+    }).then((data) =>{
+      let shouldersTitle = document.querySelector(".dbshoulderpress");
+      let shouldersTitle1 = document.querySelector(".standingdb");
+      let shouldersTitle2 = document.querySelector(".dbfrontraise");
+      let shouldersTilte3 = document.querySelector(".bandpullaparts");
+
+      shouldersTitle.textContent= data[0].exercise_name;
+      shouldersTitle1.textContent=data[1].exercise_name;
+      shouldersTitle2.textContent=data[2].exercise_name;
+      shouldersTilte3.textContent=data[3].exercise_name;
+      // workoutDesc3.textContent = data.description.sets.reps;
+    });
+};
+
+const quads =() =>{
   fetch("/api/mgroups/3",{
     method: "GET",
     cache: "reload",
@@ -48,27 +80,21 @@ const shoulders =() =>{
     .then(function(response){
       return response.json();
     }).then((data) =>{
-      let shouldersTitle = document.querySelector(".shoulders");
-      let workoutDesc3 = document.querySelector(".exercise-desc3");
-
-      shouldersTitle.textContent= data[0].exercise_name;
-      // workoutDesc3.textContent = data.description.sets.reps;
-    });
-};
-
-const quads =() =>{
-  fetch("/api/mgroups/4",{
-    method: "GET",
-    cache: "reload",
-    headers: { "Content-Type": "application/json"},
-  })
-    .then(function(response){
-      return response.json();
-    }).then((data) =>{
-      let quadsTitle = document.querySelector(".quads");
-      let workoutDesc4 = document.querySelector(".exercise-desc4");
+      let quadsTitle = document.querySelector(".backsquats");
+      let quadsTitle1 = document.querySelector(".legex");
+      let quadsTitle2 =document.querySelector(".RDL");
+      let quadsTitle3 = document.querySelector(".lunge");
+      let quadsDes =document.querySelector(".des1")
+      let quadsDes1 =document.querySelector(".des2");
+      let quadsDes2 =document.querySelector(".des3")
 
       quadsTitle.textContent= data[0].exercise_name;
+      quadsDes.textContent=data[0].description;
+      quadsTitle1.textContent=data[1].exercise_name;
+      quadsDes1.textContent=data[1].description;
+      quadsTitle2.textContent=data[2].exercise_name;
+      quadsDes2.textContent=data[2].descripiton;
+      quadsTitle3.textContetn=data[3].exercise_name;
       // workoutDesc4.textContent=data.description.sets.reps;
     });
 };
