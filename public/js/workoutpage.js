@@ -77,11 +77,19 @@ const shoulders =() =>{
       let shouldersTitle1 = document.querySelector(".standingdb");
       let shouldersTitle2 = document.querySelector(".dbfrontraise");
       let shouldersTilte3 = document.querySelector(".bandpullaparts");
+      let shoulderDes = document.querySelector(".dbspdes");
+      let shoulderDes1= document.querySelector(".sdbdes");
+      // let shoulderDes2=documnet.querySelector(".frdes");
+      let shoulderDes3=document.querySelector(".bpades");
 
       shouldersTitle.textContent= data[0].exercise_name;
       shouldersTitle1.textContent=data[1].exercise_name;
       shouldersTitle2.textContent=data[2].exercise_name;
       shouldersTilte3.textContent=data[3].exercise_name;
+      shoulderDes.textContent=data[0].descripiton;
+      shoulderDes1.textContent=data[1].description;
+      // shoulderDes2.textContent=data[2].descripiton;
+      shoulderDes3.textContent=data[3].descripiton;
       // workoutDesc3.textContent = data.description.sets.reps;
     });
 };
@@ -115,7 +123,7 @@ const quads =() =>{
 };
 
 const glutesAndHams =()=>{
-  fetch("/api/mgroups/5",{
+  fetch("/api/mgroups/4",{
     method: "GET",
     cache: "reload",
     headers: { "Content-Type": "application/json"},
@@ -123,10 +131,23 @@ const glutesAndHams =()=>{
     .then(function(response){
       return response.json();
     }).then((data) =>{
-      let ghamTitle = document.querySelector(".gluteshammies");
-      let workoutToDo5 = document.querySelector(".exeercise-desc5");
+      let armTitle = document.querySelector(".skullcrushers");
+      let armTitle1 = document.querySelector(".cabletricep");
+      let armTitle2 = document.querySelector(".dbhammer");
+      let armTitle3 = document.querySelector(".forearmcurl");
+      let armDes = document.querySelector(".skulldesc");
+      let armDes1 = document.querySelector(".tricepdesc");
+      let armDes2 = document.querySelector(".hammerdesc");
+      let armDes3 = document.querySelector(".forearmdesc");
 
-      ghamTitle.textContent=data[0].exercise_name;
+      armTitle.textContent = data[0].exercise_name;
+      armTitle1.textContent = data[1].exercise_name;
+      armTitle2.textContent = data[2].exercise_name;
+      armTitle3.textContent= data[3].exercise_name;
+      armDes.textContent= data[0].descripiton;
+      armDes1.textContent= data[1].description;
+      armDes2.textContent=data[2].descripiton;
+      armDes3.textContent=data[3].descripiton;
       // workoutToDo5.textContent= data.description.sets.reps;
     });
 };
