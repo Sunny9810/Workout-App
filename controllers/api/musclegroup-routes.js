@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { MuscleGroup, Exercises, Quotes } = require("../../models");
+const MuscleGroups = require("../../models/musclegroup");
 
 router.get("/", (req, res) => {
   MuscleGroup.findAll({ include: Exercises }).then((MuscleGroupData) => {
@@ -11,14 +12,17 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
   // find a single musclegroup by its `id`
   // included its Exercises
-  MuscleGroup.findOne({
+  Exercises.findAll({
     where: {
-      id: req.params.id,
+      musclegroup_id: req.params.id,
     },
-    attributes: ['muscle_name', 'description']
+    // attributes: ['muscle_name', 'description']
   }).then((musclegroupData) => {
     res.json(musclegroupData);
   });
 });
 
+
 module.exports = router;
+
+
