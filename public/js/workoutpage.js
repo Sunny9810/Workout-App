@@ -11,7 +11,12 @@ const chestAndTricep =() =>{
       let workoutDesc2 = document.querySelector(".exercise-desc2");
 
       chestTitle.textContent= data.exercise_name;
-      workoutDesc2.textContent = data.description.sets.reps;
+      
+      data.exercises.forEach((exercise) => {
+        const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
+        const description = `<p>${exercise.description}</p>`;
+        workoutDesc2.innerHTML += setsAndReps + description;
+      });
      });
 };
 
@@ -27,8 +32,8 @@ const backAndBicep =() =>{
       let backTitle = document.querySelector(".backandbis");
       let workoutDesc1 = document.querySelector('.exercise-desc');
 
-      backTitle.TextContent= data.exercise_name;
-      workoutDesc1.TextContent= data.description.sets.reps;
+      backTitle.textContent= data.exercise_name;
+      workoutDesc1.textContent= data.description.sets.reps;
     });
 };
 
@@ -45,8 +50,8 @@ const shoulders =() =>{
       let shouldersTitle = document.querySelector(".shoulders");
       let workoutDesc3 = document.querySelector(".exercise-desc3");
 
-      shouldersTitle.TextContent= data.exercise_name;
-      workoutDesc3.TextContent = data.description.sets.reps;
+      shouldersTitle.textContent= data.exercise_name;
+      workoutDesc3.textContent = data.description.sets.reps;
     });
 };
 
@@ -62,8 +67,8 @@ const quads =() =>{
       let quadsTitle = document.querySelector(".quads");
       let workoutDesc4 = document.querySelector(".exercise-desc4");
 
-      quadsTitle.TextContent= data.exercise_name;
-      workoutDesc4.TextContent=data.description.sets.reps;
+      quadsTitle.textContent= data.exercise_name;
+      workoutDesc4.textContent=data.description.sets.reps;
     });
 };
 
@@ -79,8 +84,8 @@ const glutesAndHams =()=>{
       let ghamTitle = document.querySelector(".gluteshammies");
       let workoutToDo5 = document.querySelector(".exeercise-desc5");
 
-      ghamTitle.TextContent=data.exercise_name;
-      workoutToDo5.TextContent= data.description.sets.reps;
+      ghamTitle.textContent=data.exercise_name;
+      workoutToDo5.textContent= data.description.sets.reps;
     });
 };
 
