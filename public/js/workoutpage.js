@@ -10,13 +10,13 @@ const chestAndTricep =() =>{
       let chestTitle = document.querySelector(".chestandtris");
       let workoutDesc2 = document.querySelector(".exercise-desc2");
 
-      chestTitle.textContent= data.exercise_name;
+      chestTitle.textContent= data[0].exercise_name;
       
-      data.exercises.forEach((exercise) => {
-        const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
-        const description = `<p>${exercise.description}</p>`;
-        workoutDesc2.innerHTML += setsAndReps + description;
-      });
+      // data.exercises.forEach((exercise) => {
+      //   const setsAndReps = `<p>Set ${exercise.sets}: ${exercise.reps}</p>`;
+      //   const description = `<p>${exercise.description}</p>`;
+      //   workoutDesc2.innerHTML += setsAndReps + description;
+      // });
      });
 };
 
@@ -29,11 +29,12 @@ const backAndBicep =() =>{
     .then(function(response){
       return response.json();
     }).then((data) => {
+      console.log(data)
       let backTitle = document.querySelector(".backandbis");
       let workoutDesc1 = document.querySelector('.exercise-desc');
 
-      backTitle.textContent= data.exercise_name;
-      workoutDesc1.textContent= data.description.sets.reps;
+      backTitle.textContent= data[0].exercise_name;
+      // workoutDesc1.textContent= data.description.sets.reps;
     });
 };
 
@@ -50,8 +51,8 @@ const shoulders =() =>{
       let shouldersTitle = document.querySelector(".shoulders");
       let workoutDesc3 = document.querySelector(".exercise-desc3");
 
-      shouldersTitle.textContent= data.exercise_name;
-      workoutDesc3.textContent = data.description.sets.reps;
+      shouldersTitle.textContent= data[0].exercise_name;
+      // workoutDesc3.textContent = data.description.sets.reps;
     });
 };
 
@@ -67,8 +68,8 @@ const quads =() =>{
       let quadsTitle = document.querySelector(".quads");
       let workoutDesc4 = document.querySelector(".exercise-desc4");
 
-      quadsTitle.textContent= data.exercise_name;
-      workoutDesc4.textContent=data.description.sets.reps;
+      quadsTitle.textContent= data[0].exercise_name;
+      // workoutDesc4.textContent=data.description.sets.reps;
     });
 };
 
@@ -84,10 +85,11 @@ const glutesAndHams =()=>{
       let ghamTitle = document.querySelector(".gluteshammies");
       let workoutToDo5 = document.querySelector(".exeercise-desc5");
 
-      ghamTitle.textContent=data.exercise_name;
-      workoutToDo5.textContent= data.description.sets.reps;
+      ghamTitle.textContent=data[0].exercise_name;
+      // workoutToDo5.textContent= data.description.sets.reps;
     });
 };
+
 
 chestAndTricep();
 backAndBicep();
