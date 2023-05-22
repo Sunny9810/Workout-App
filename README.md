@@ -54,10 +54,7 @@ WHEN: the user opens the site
 THEN: they are provided with the description of what the app entails & a login and signup area.
 
 WHEN: the user signs-up or has logged in
-THEN: they will be taken to the main page where they can see previous and current exercise info
-
-WHEN: user sees(or clicks) on the 'previous workout' section
-THEN: their last workout session will be retrieved through our database
+THEN: they will be taken to the main page where they can see warm-up,today workout and cool down  info
 
 WHEN: user clicks on 'today's workout'
 THEN: they will be redirected to separate page that displays different muscle groups
@@ -68,8 +65,11 @@ THEN: they will be prompted with four exercises for that muscle group, pulled fr
 WHEN: done with workout, the user can click on the bottom right corner button
 THEN: they will be redirected  back to main page
 
+WHEN: user clicks on 'warm-up"
+THEN:they will be prompted with motivational quotes to start the workout and will be provided with three exercises to choose and start the wram-up.
+
 WHEN: the user is redirected back they will  click the 'cool down' section that will redirect you to separate page
-THEN: they will be prompted with motivational quote and three quick exercises to end their day
+THEN: they will be prompted  to write their own motivational quote and three quick exercises to end their day
 
 ## Contributing
 
