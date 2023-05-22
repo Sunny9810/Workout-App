@@ -121,6 +121,7 @@ router.get("/workoutpage/:id", async (req, res) => {
   }
 });
 
+
 router.get("/test", (req, res) => {
   res.render("optionpg");
 });
@@ -131,3 +132,4 @@ router.get("/test", (req, res) => {
 
 router;
 module.exports = router;
+

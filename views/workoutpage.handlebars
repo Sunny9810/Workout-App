@@ -18,12 +18,12 @@
   </div>
 </div>
   <!-- Modal; will appear when button for exercise is clicked-->
-  {{#each MuscleGroups as |muscle|}}
-  <div class="modal fade" id="Modal{{@muscle}}" tabindex="-1" aria-labelledby="{{this}}ModalLabel" aria-hidden="true">
+   {{!-- {{#each MuscleGroups as |muscle|}} --}}
+  {{!-- <div class="modal fade" id="my-Modal" tabindex="-1" aria-labelledby="{{muscle.muscle_name}}ModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="{{this}}ModalLabel">Today's Workout:</h5>
+          <h5 class="modal-title" id="{{muscle.muscle_name}}ModalLabel">Today's Workout:</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -37,8 +37,117 @@
         </div>
       </div>
     </div>
+  </div> --}}
+  {{!-- {{/each}} --}}
+
+   <!-- Button trigger modal -->
+{{!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> --}}
+
+
+{{!-- Modal 1 --}}
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel1">Todays Workout:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="backandbis"></h2>
+        <p class="exercise-desc"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cooldwnbtn">Cool Down</button>
+      </div>
+    </div>
   </div>
-  {{/each}}
+</div>
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel2">Todays Workout:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="chestandtris"></h2>
+        <p class="exercise-desc2"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cooldwnbtn">Cool Down</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Modal 3 --}}
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel3">Todays Workout:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="shoulders"></h2>
+        <p class="exercise-desc3"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cooldwnbtn">Cool Down</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Modal 4 --}}
+
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel4">Todays Workout:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="quads"></h2>
+        <p class="exercise-desc4"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cooldwnbtn">Cool Down</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Modal 5 --}}
+
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel5">Todays Workout:</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h2 class="gluteshammies"></h2>
+        <p class="exercise-desc5"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary cooldwnbtn">Cool Down</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   {{!-- swiffy slider --}}
   <div
@@ -53,8 +162,12 @@
             <h3 class="card-title h5">Back and Biceps</h3>
             <p class="card-text">The main focus will be on your lats and biceps.</p>
             <a href="optionpg" class="btn btn-primary">Previous Page</a>
-            <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
-              data-bs-target="#Modal{{@muscle}}">See Workout</button>
+          {{!-- button to trigger Modal 1 --}}
+            <button type="button" class="btn btn-primary btn1" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+  See Workout
+</button>
+            {{!-- <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
+              data-bs-target="#Modal{{@muscle}}" id="btn1">See Workout</button> --}}
           </div>
         </div>
       </li>
@@ -67,8 +180,10 @@
             <h3 class="card-title h5">Chest and Triceps</h3>
             <p class="card-text">The main muscle groups target will be your chest and triceps.</p>
             <a href="optionpg" class="btn btn-primary">Previous Page</a>
-            <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
-              data-bs-target="#Modal{{@muscle}}">See Workout</button>
+{{!-- Button to trigger Modal 2 --}}
+                   <button type="button" class="btn btn-primary btn2" data-bs-toggle="modal" data-bs-target="#exampleModal2" id="chesttricepsbtn">See Workout</button>
+            {{!-- <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
+              data-bs-target="#Modal{{@muscle}}" id="btn2">See Workout</button> --}}
           </div>
         </div>
       </li>
@@ -81,9 +196,13 @@
             <h3 class="card-title h5">Shoulders</h3>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
               content.</p>
-            <a href="optionpg" class="btn btn-primary">Previous Page</a>
-            <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
-              data-bs-target="#Modal{{@muscle}}">See Workout</button>
+              <a href="optionpg" class="btn btn-primary">Previous Page</a>
+                  {{!-- button to trigger Modal 3 --}}
+            <button type="button" class="btn btn-primary btn3" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+  See Workout
+</button>
+            {{!-- <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
+              data-bs-target="#Modal{{@muscle}}" id="btn3">See Workout</button> --}}
           </div>
         </div>
       </li>
@@ -96,8 +215,12 @@
             <h3 class="card-title h5">Quads</h3>
             <p class="card-text">This workout will focus on your quadriceps.</p>
             <a href="optionpg" class="btn btn-primary">Previous Page</a>
-            <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
-              data-bs-target="#Modal{{@muscle}}">See Workout</button>
+                {{!-- button to trigger Modal 4 --}}
+            <button type="button" class="btn btn-primary btn4" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+  See Workout
+</button>
+            {{!-- <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
+              data-bs-target="#Modal{{@muscle}}" id="btn4">See Workout</button> --}}
           </div>
         </div>
       </li>
@@ -110,8 +233,12 @@
             <h3 class="card-title h5">Glutes and Hamstrings</h3>
             <p class="card-text">This workout will focus on your glutes and Hamstrings.</p>
             <a href="optionpg" class="btn btn-primary">Previous Page</a>
-            <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
-              data-bs-target="#Modal{{@muscle}}">See Workout</button>
+                {{!-- button to trigger Modal 5 --}}
+            <button type="button" class="btn btn-primary btn5" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+  See Workout
+</button>
+            {{!-- <button type="button" class="btn btn-primary modal-open" data-bs-toggle="modal"
+              data-bs-target="#Modal{{@muscle}}" id="btn5">See Workout</button> --}}
           </div>
         </div>
       </li>
