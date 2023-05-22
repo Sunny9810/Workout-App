@@ -1,53 +1,57 @@
- <h1>GETFIT<h1>
+# GETFIT
 
 A workout app for beginners and experts across the board. Quickly Signup and Login through our landing page. Once logged in simply choose your workout and start to GETFIT.
 
- 
- <h3>Table of Contents:<h3>
+## Table of Contents
 
-Introduction,
+[Introduction](Introduction)
 
-Features,
+[Features](Features)
 
-Getting Started,
+[Getting-Started](Getting-Started)
 
-Usage,
+[Usage](Usage)
 
-Dependencies,
+[Contributing](Contributing)
 
-Contributing,
+[License](License)
 
-License,
+[Upcoming-Features](Upcoming-Features)
 
-Upcoming Features,
+[FAQ](FAQ)
 
-FAQ,
+[Credits](Credits)
 
-Credits/Links
+[Links](Links)
 
- 
- <h3>Introduction:<h3>
+## Introduction
 
-Workout should be easy and accessible for everyone. With GetFit, you can easily track your workouts, set goals, and stay motivated on your fitness journey. Whether you're a beginner or a fitness enthusiast, GetFit is the perfect app to help you reach your goals. Sign up now and start your fitness journey today!" For best result make sure you have a gym membership, comfortable workout clothes and shoes,basic fitness equipment and, of course, a willingness to commit to your fitness journey.
+Working out should be easy and accessible for everyone. With GetFit, you can easily track your workouts, set goals, and stay motivated on your fitness journey. Whether you're a beginner or a fitness enthusiast, GetFit is the perfect app to help you reach your goals. Sign up now and start your fitness journey today!" For best result make sure you have a gym membership, comfortable workout clothes and shoes,basic fitness equipment and, of course, a willingness to commit to your fitness journey.
 
- 
- <h3>Features:<h3>
+## Features
 
-Workout any muscle group you'd like.
-Recieve a motivational quote upon login.
+* Workout any muscle group you'd like.
+* Recieve a motivational quote upon login.
+* Saved login information
 
- 
- <h3>Getting Started:<h3>
+## Getting Started
 
-To get started Sign up though our login page, create an account, select a workout, and begin
+### To get started Sign up though our login page you must
 
- 
- <h3>Usage:<h3>
+* Create an account
+* Carefully read requirements
+* Follow our warm-up exercises
+* Select a muscle group to workout
+* Begin your workout (give it your all!)
+* Enjoy the coold down exercises
+* Exit the app
 
-<img src="GEetFitLogin.png" alt="GETFIT login page" style="width: 190px; height: 140px;">
+## Usage
 
-WHEN: the user opens the site 
-THEN: they are provided with the description of what the app entails & a login and signup area. 
+![GET-FIT login page](GEetFitLogin.png)
+
+WHEN: the user opens the site
+THEN: they are provided with the description of what the app entails & a login and signup area.
 
 WHEN: the user signs-up or has logged in
 THEN: they will be taken to the main page where they can see previous and current exercise info
@@ -56,7 +60,7 @@ WHEN: user sees(or clicks) on the 'previous workout' section
 THEN: their last workout session will be retrieved through our database
 
 WHEN: user clicks on 'today's workout'
-THEN: they will be redirected to separate page that displays different muscle groups 
+THEN: they will be redirected to separate page that displays different muscle groups
 
 WHEN: user chooses which muscle group they would like to workout that day
 THEN: they will be prompted with four exercises for that muscle group, pulled from our seeds file.
@@ -67,29 +71,23 @@ THEN: they will be redirected  back to main page
 WHEN: the user is redirected back they will  click the 'cool down' section that will redirect you to separate page
 THEN: they will be prompted with motivational quote and three quick exercises to end their day
 
+## Contributing
 
- 
- <h3>Contributing:<h3>
+If you'd like to contribute your thoughts or Ideas/Bug problems/Issues with the website we would gladly accept your input at <GETFIT@mindyabusiness.com>
 
-If you'd like to contribute your thoughts or Ideas/Bug problems/Issues with the website we would gladly accept your input at GETFIT@mindyabusiness.com
+## Upcoming Features
 
+* Reminder of previous session workout, so people know what they workedout last.
 
- 
- <h3>Upcoming Features:<h3>
+* Caloric Counter, tracks calories burned/calorie input for daily workouts/meal
 
--Reminder of previous session workout, so people know what they workedout last.
+* Workout timer to track length of workout.
 
--Caloric Counter, tracks calories burned/calorie input for daily workouts/meal
+* Meal Prep/Diet Tips.
 
--Workout timer to track length of workout.
+* MORE WORKOUTS!
 
--Meal Prep/Diet Tips.
-
--MORE WORKOUTS!
-
-
- 
- <h3>FAQ:<h3>
+## FAQ
 
 Q:Where should i use the app?
 
@@ -105,15 +103,15 @@ A:Yes! you will have to create a profrile to use the app.
 
 Q:Will you be adding more to the website?
 
-A:Yes! you can send us your ideas/bug issues at GETFIT@mindyabusiness.com
+A:Yes! you can send us your ideas/bug issues at <GETFIT@mindyabusiness.com>
 
 Q:What if i dont like the workout provided?
 
 A:Choose a different workout! Theres plenty to choose from.
 
+## Credits
 
- 
- <h3>Credits:<h3> Here at GETFIT we'd like to express our greatest thanks to the authors of GETFIT listed Below:
+ Here at GETFIT we'd like to express our greatest thanks to the authors of GETFIT listed Below:
 
 Author: Abigail Garcia,
 
@@ -129,6 +127,8 @@ Thank you and GOOD LUCK in your future endeavors!
 
 -GETFIT Managment
 
-Link to deployed website:
+## Links
 
-Link to Github repository: https://github.com/Sunny9810/Workout-App
+[GET-FIT Website :]()
+
+[Github Link :](https://github.com/Sunny9810/Workout-App)
