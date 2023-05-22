@@ -89,9 +89,9 @@ img {
 }
 
 /* Sunny's working page */
-#previous-workout {
+/* #previous-workout {
   background-color: #eef5db;
-}
+} */
 
 .card {
   padding: 20px;
@@ -126,6 +126,30 @@ img {
     margin: 10px;
     padding: 10px;
   }
+}
+
+  #quote-input{
+  font-size: 14px;
+  font-weight:bold;
+  font-style:italic;
+  text-align:center;
+  padding: auto;
+  border: #e15b02;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+#save-button{
+  background-color:#e15b02;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#save-button:hover{
+  background-color: black;
 }
 
 

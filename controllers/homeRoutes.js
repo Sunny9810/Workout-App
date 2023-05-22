@@ -45,8 +45,25 @@ router.get("/optionpg", (req, res) => {
 });
 
 // !!!!!!!!!!!!!!!!!!COOL DOWN ROUTES !!!!!!!!!!!!!!!! //
+// router.get("/cooldown", withAuth, async (req, res) => {
+//   res.render("cooldown", {logged_in: req.session.logged_in});
+// });
+
 router.get("/cooldown", withAuth, async (req, res) => {
-  res.render("cooldown", {logged_in: req.session.logged_in});
+  try {
+    const quotesData = await Quotes.findAll({
+      attributes: ["quotes"], // Include only the "quotes" attribute
+      raw: true, // Return plain JSON objects instead of Sequelize instances
+    });
+    const quotesContent = quotesData.map((quote) => quote.quotes);
+    res.render("cooldown", {
+      logged_in: req.session.logged_in,
+      quotes: quotesContent,
+    });
+  } catch (error) {
+    console.error("Error fetching quotes data:", error);
+    res.status(500).json({ error: "Failed to fetch quotes data" });
+  }
 });
 
 router.get("/cooldown/:id", async (req, res) => {
