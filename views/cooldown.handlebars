@@ -1,25 +1,33 @@
-<div class="card text-center" id="quote-area">
+ <div class="card text-center" id="quote-area">
         <div class="card-body" id="quote-card">
         <h5 class="card-title" id="intro-font">GET FIT</h5>
-        <h2>Hear this...</h2>
+        <h3>Did a motivational quote ignite your inner drive before your workout? Now, unleash that same inspiration to uplift others. Share your own unique quote here and empower others to ignite their day with renewed energy!</h3>
+        {{!-- <form action="/" method="POST"> --}}
+        {{!-- <div class ="form-group"> --}}
+        <input type="text" id="quote-input" placeholder= "Write here">
+         <button onclick="saveQuote()" id="save-button">Save</button>
+         </div>
+          </div>
+          </div>
+        </form>
+
+
+        {{!-- <h2>Hear this...</h2> --}}
         {{!-- {{#each quotes as |quote|}} --}}
-        <div id="quotebody" class="card mb-3">
+        {{!-- <div id="quotebody" class="card mb-3">
             <blockquote class="quote">
                 <p class="quote-text"></p>
             </blockquote>
-        </div>
-    <div class="card-body" id="quote-card">
+        </div> --}}
+    {{!-- <div class="card-body" id="quote-card">
         <h6 class="card-title" id="intro-font2">COOLDOWN</h6>
-        <h2>Description:</h2>
+        <h2>Description:</h2> --}}
         {{!-- {{#each quotes as |quote|}} --}}
-        <div id="quotebody" class="card mb-3">
-            <blockquote class="quote">
-                <p class="quote-text" id="musclegroup"></p>
-            </blockquote>
-        </div>
+       {{!-- /
+        </div> --}}
         {{!-- {{/each}} --}}
-    </div>
-</div>
+    {{!-- </div>
+</div> --}} 
 
 {{!-- {{#each exercises}} --}}
 <div class="justify-content-between" id="warmup">

@@ -7,26 +7,33 @@ optionBtn.addEventListener("click", function () {
   });
 
 
-const quoteWarmUp =() =>{
-    fetch("/api/quotes",{
-        method: "GET",
-        cache: "reload",
-        // body: JSON.stringify({ quotes }),
-      headers: { "Content-Type": "application/json" },
-    })
-        .then(function(response){
-            return response.json();
-    }).then((data)=>{
-        let quoteSpace=document.querySelector(".quote-text");
-        console.log(data);
-        const randomIndex=Math.floor(Math.random()*data.length);
+// const quoteWarmUp =() =>{
+//     fetch("/api/quotes",{
+//         method: "GET",
+//         cache: "reload",
+//         // body: JSON.stringify({ quotes }),
+//       headers: { "Content-Type": "application/json" },
+//     })
+//         .then(function(response){
+//             return response.json();
+//     }).then((data)=>{
+//         let quoteSpace=document.querySelector(".quote-text");
+//         console.log(data);
+//         const randomIndex=Math.floor(Math.random()*data.length);
 
-        const randomQuote=data[randomIndex];
-        console.log(randomQuote);
+//         const randomQuote=data[randomIndex];
+//         console.log(randomQuote);
 
-        quoteSpace.textContent= JSON.stringify(randomQuote);
-    });
-};
+//         quoteSpace.textContent= JSON.stringify(randomQuote);
+//     });
+// };
+
+ //Saving the quote to local storage and displaying the saved quote in a separte section of the page-S.
+    // function saveQuote(){
+    // let quote =document.getElementById("quote-input").value;
+    // localStorage.setItem("quote-input", quote);
+    // let quoteData=document.createElement("div");
+    // }
 
 
 const exercisesWarmUp1 =() =>{
@@ -105,7 +112,7 @@ const muscleGroupDes =() =>{
 
 
 
-quoteWarmUp();
+// quoteWarmUp();
 exercisesWarmUp1();
 exercisesWarmUp2();
 exercisesWarmUp3();
