@@ -1,3 +1,12 @@
+
+let workoutDayBtn= document.querySelector("#today-workout-btn");
+
+
+workoutDayBtn.addEventListener("click", function () {
+    document.location.replace("workoutpage")
+  });
+
+
 const quoteWarmUp =() =>{
     fetch("/api/quotes",{
         method: "GET",
