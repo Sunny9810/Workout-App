@@ -23,7 +23,7 @@ const chestAndTricep =() =>{
       chestTitle3.textContent=data[3].exercise_name;
       chestDes.textContent=data[0].description;
       chestDes1.textContent=data[1].description;
-      chestDes2.textContent=data[2].descripiton;
+      chestDes2.textContent=data[2].description;
       chestDes3.textContent=data[3].description;
      });
 };
@@ -53,9 +53,9 @@ const backAndBicep =() =>{
       backTitle3.textContent= data[2].exercise_name;
       backTitle4.textContent= data[3].exercise_name;
       backDesc.textContent=data[0].description;
-      backDesc1.textContent=data[1].descripiton;
-      backDes2.textContent=data[2].descripiton;
-      backDes3.textContent=data[3].descripiton;
+      backDesc1.textContent=data[1].description;
+      backDes2.textContent=data[2].description;
+      backDes3.textContent=data[3].description;
       // workoutDesc1.textContent= data.description.sets.reps;
     });
 };
@@ -84,10 +84,10 @@ const shoulders =() =>{
       shouldersTitle1.textContent=data[1].exercise_name;
       shouldersTitle2.textContent=data[2].exercise_name;
       shouldersTilte3.textContent=data[3].exercise_name;
-      shoulderDes.textContent=data[0].descripiton;
+      shoulderDes.textContent=data[0].description;
       shoulderDes1.textContent=data[1].description;
       // shoulderDes2.textContent=data[2].descripiton;
-      shoulderDes3.textContent=data[3].descripiton;
+      shoulderDes3.textContent=data[3].description;
       // workoutDesc3.textContent = data.description.sets.reps;
     });
 };
@@ -116,7 +116,7 @@ const quads =() =>{
       quadsTitle1.textContent=data[1].exercise_name;
       quadsDes1.textContent=data[1].description;
       quadsTitle2.textContent=data[2].exercise_name;
-      quadsDes2.textContent=data[2].descripiton;
+      quadsDes2.textContent=data[2].description;
       quadsTitle3.textContetn=data[3].exercise_name;
       // workoutDesc4.textContent=data.description.sets.reps;
     });
@@ -146,10 +146,10 @@ const bicepsTriceps =()=>{
       armTitle1.textContent = data[1].exercise_name;
       armTitle2.textContent = data[2].exercise_name;
       armTitle3.textContent= data[3].exercise_name;
-      armDes.textContent= data[0].descripiton;
+      armDes.textContent= data[0].description;
       armDes1.textContent= data[1].description;
-      armDes2.textContent=data[2].descripiton;
-      armDes3.textContent=data[3].descripiton;
+      armDes2.textContent=data[2].description;
+      armDes3.textContent=data[3].description;
       // workoutToDo5.textContent= data.description.sets.reps;
     });
 };
