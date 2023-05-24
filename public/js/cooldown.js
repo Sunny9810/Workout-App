@@ -143,7 +143,7 @@ const muscleGroupDes =() =>{
 const saveQuote = () => {
     const quoteInput = document.querySelector("#quote-input");
     const quote = quoteInput.value;
-    fetch("/api/quotes", {
+    fetch("/api/quotes/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ quotes: quote }),
