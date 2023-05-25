@@ -1,0 +1,221 @@
+/* .background {
+  background-color: #0d6efd;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.login-body {
+  background-color: #7a9e9f;
+}
+
+#form-color, #quote-area{
+  background-color: #eef5db;
+}
+
+ 
+
+.btn-color {
+  background-color: #fe5f55;
+}
+
+.row {
+  /* background-color: white; */
+  border-radius: 3px;
+  box-shadow: 12px 12px 22px grey;
+}
+
+img {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-top: 8rem;
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn1:hover {
+  background: white;
+  border: 1px solid;
+  color: black;
+}
+
+#login-title {
+  font-family: "Jost", sans-serif;
+  /* font-family: 'Playfair Display SC', serif;
+  font-family: 'PT Sans', sans-serif; ; */
+}
+
+.title {
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 2rem ;
+}
+
+#intro-font{
+  font-size: 10rem;
+  color: #e15b02;
+  text-decoration: underline;
+}
+
+#intro-font1{
+  font-size: 7rem;
+  color: #e15b02;
+}
+
+#intro-font2{
+  font-size: 7rem;
+  color: rgb(10, 90, 210)
+}
+#getfit-title {
+  font-size: 4rem;
+}
+
+.logo {
+  width: 35rem;
+}
+
+/* Sunny's working page */
+/* #previous-workout {
+  background-color: #eef5db;
+} */
+
+.card {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#warm-up {
+  background-color: #e15b02;
+}
+
+
+#cool-down{
+  background-color: rgb(10, 90, 210);
+}
+
+#todays-workout {
+  background-color: #b8d8d8;
+}
+
+/* #cool-down {
+  background-color: #b8d8d8;
+} */
+
+@media (max-width: 767px) {
+  .optionpg {
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+  }
+  .card {
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+  #quote-input{
+  font-size: 14px;
+  font-weight:bold;
+  font-style:italic;
+  text-align:center;
+  padding: auto;
+  border: #e15b02;
+  border-radius: 50px;
+  padding: 10px 15px;
+}
+
+#save-button{
+  background-color:#e15b02;
+  color: whitesmoke;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#save-button:hover{
+  background-color: black;
+}
+
+
+/* abigail's section for workout page */
+/* h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+/* .image-wrapper {
+  max-width: 100%;
+  height: 65vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+@media screen and (min-width: 576px) {
+  .carousel-inner {
+    display: flex;
+  }
+  .carousel-item {
+    display: block;
+    margin-right: 0;
+    flex: 0 0 calc(100% / 3);
+  }
+  .image-wrapper{
+    max-height: 23vw;
+  }
+}
+.carousel-inner {
+  padding: 1em;
+}
+.card{
+  margin: 0 .5em;
+  border-radius: 0;
+  box-shadow: 2px 6px 8px 0px rgba(22, 22, 26, .18);
+} */
+
+#workout-title{
+  font-size: xx-large;
+  font-weight: 600;
+  color: #e15b02;
+}
+
+
+#today-workout-btn{
+  background-color: #7a9e9f;
+  font-size: 4rem;
+}
+
+#back-to-option{
+  background-color: #7a9e9f;
+  font-size: 4rem;
+}
+
+
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
